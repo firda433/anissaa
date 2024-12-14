@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Cinta untuk Kamu ❤️</title>
+    <style>
+        /* Background gradient dengan animasi */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .heart {
+            color: #ff6f91;
+            font-size: 5rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff6f91;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background: #ff5778;
+        }
+
+        .button:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hai Sayangku! ❤️</h1>
+        <p class="message">Aku cuma mau bilang kalau kamu adalah orang paling spesial di hidupku. Selalu ingat, aku cinta kamu apa adanya! 😘</p>
+        <div class="heart">💖</div>
+        <button class="button" onclick="balas()">Balas Aku di WhatsApp</button>
+    </div>
+
+    <script>
+        function balas() {
+            const waLink = "https://wa.me/6285609726211?text=" + 
+                encodeURIComponent("Hai Sayang! Aku baca pesan cintamu ❤️");
+            window.open(waLink, "_blank");
+        }
+    </script>
+</body>
+</html>
